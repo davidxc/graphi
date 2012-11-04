@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	    <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}jsviz.css"></link>
+	    <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}jquery.dataTables.css"></link>
+	  	<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}jquery.dataTables_themeroller.css"></link>
+	 	<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}jquery-ui-1.9.0.custom.css"></link>
+		<script type="text/javascript" src="{{STATIC_URL}}workered-jsviz.js?v=2"></script>
+		<script type="text/javascript" src="{{STATIC_URL}}jquery-1.8.2.js"></script>
+		<script type="text/javascript" src="{{STATIC_URL}}progress-view.js?v=2"></script>
+		<script type="text/javascript" src="{{STATIC_URL}}progress-model.js?v=2"></script>
+		<script type="text/javascript" src="{{STATIC_URL}}worker-stopgo.js?v=2"></script>
+		<script type="text/javascript" src="{{STATIC_URL}}global-util.js?v=2"></script>
+		<script type="text/javascript" src="{{STATIC_URL}}jsviz.js?v=2"></script>
+		<script type="text/javascript" src="{{STATIC_URL}}errorsink.js?v=2"></script>
+		<script type="text/javascript" src="{{STATIC_URL}}jsviz-ui.js?v=2"></script>
+		<script type="text/javascript" src="{{STATIC_URL}}graph-model.js?v=2"></script>
+		<script type="text/javascript" src="{{STATIC_URL}}curve-tween.js?v=2"></script>
+		<script type="text/javascript" src="{{STATIC_URL}}difftype.js?v=2"></script>
+		<script type="text/javascript" src="{{STATIC_URL}}jquery.form.js"></script>
+		<script type="text/javascript" src="{{STATIC_URL}}jquery.dataTables.js"></script>
+		<title>Liviz.js (JSViz)</title>
+	</head>
+	<body class="app-page" onload="void w_launch()">
+        <form id="profileform" enctype="multipart/form-data" method="POST" action="/parsepython/">
+        	{% csrf_token %}
+        	<input type="file" name="profile" size="40">
+        	<input type="submit" value="Graph">
+        </form>
+        <div id="graph-div">
+		<svg id="graph-svg" style="outline: none;" preserveAspectRatio="none"><g id="mainGraphContainer" /></svg>
+		</div>
+			<textarea id="dot-src" style="width: 260px;height: 300px; display:none;">
+					digraph {
+ 						ranksep=0.2;
+ 						node [height=0.375];
+ 						{node[shape=box]
+ 						A;
+ 						B;
+ 						C;
+ 						D;
+ 						}
+ 						{
+ 						edge[label="Hello"]
+ 						A -> B;
+ 						edge[label="Goodbye"]
+ 						C -> D;
+ 						}
+ 						}
+			</textarea>
+			<table id="profile_table" border="1">
+				<thead>
+					<tr>
+						<th id="funcname"> filename:line number:function </th>
+						<th id="totaltime"> total % of time (includes calls to other funcs) </th>
+						<th id="selftime"> self % of time </th>
+						<th id="totalcalls"> total calls </th>
+					</tr>
+				</thead>
+				<tbody id="profile_table_body">
+				</tbody>
+			</table>		
+			<span id="marker">
+	</body>
+</html>

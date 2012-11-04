@@ -1,0 +1,97 @@
+html {
+	width: 100%;
+	min-width: 1300px;
+	}
+	
+body {
+	min-width: 1300px;
+	}
+
+h4 {
+	font-size: 16px !important;
+	}
+	
+#faqtitle {
+	position: relative;
+	top: 50px;
+	text-align: center;
+	}
+
+#titletext {
+	position: relative;
+	right: 5px;
+	}
+
+#ques1, #ques2, #ques3, #ques4 {
+	position: relative;
+	top: 80px;
+	left: 35%;
+	width: 63%;
+	}
+
+#ques2 {
+	top: 120px !important;
+	}
+	
+#ques3 {
+	top: 160px !important;
+	}
+	
+#ques4 {
+	top: 200px !important;
+	}
+	
+#info1 {
+	position: relative;
+	font-size: 16px;
+	left: 35%;
+	top: 100px;
+	width: 63%;
+	}
+		
+#info2 {
+	position: relative;
+	font-size: 16px;
+	left: 35%;
+	top: 130px;
+	width: 63%;
+	}
+	
+#info3 {
+	position: relative;
+	font-size: 16px;
+	left: 35%;
+	top: 170px;
+	width: 63%;
+	}
+
+#info4 {
+	position: relative;
+	font-size: 16px;
+	left: 35%;
+	top: 210px;
+	width: 63%;
+	}
+
+@media (max-width: 1450px) {
+	#info1 {
+		left: 32% !important;
+		}
+	
+	#info-contact {
+		left: 32% !important;
+		}
+			
+	#info2 {
+		left: 32% !important;
+		}
+	#info3 {
+		left: 32% !important;
+	}
+	#info4 {
+		left: 32% !important;
+	}
+	#ques1, #ques2, #ques3, #ques4 {
+		left: 32% !important;
+		}
+}

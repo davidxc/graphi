@@ -1,0 +1,41 @@
+html {
+	width: 100%;
+	min-width: 1300px;
+	}
+	
+body {
+	min-width: 1300px;
+	}
+
+h4 {
+	font-size: 16px !important;
+	}
+	
+#termsdiv {
+	position: relative;
+	top: 50px;
+	text-align: center;
+	}
+
+#titletext {
+	position: relative;
+	right: 5px;
+	}
+	
+#info1 {
+	position: relative;
+	font-size: 16px;
+	left: 35%;
+	top: 100px;
+	width: 63%;
+	}
+		
+@media (max-width: 1450px) {
+	#info1 {
+		left: 32% !important;
+		}	
+			
+	#info2 {
+		left: 32% !important;
+		}	
+}

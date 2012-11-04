@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}base.css"></link>
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}jquery.dataTables.css"></link>
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}jquery.dataTables_themeroller.css"></link>
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}jquery-ui-1.9.0.custom.css"></link>
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}home.css"></link>
+{% endblock %}
+
+{% block extrascript-top %}
+<script type="text/javascript" src="{{STATIC_URL}}workered-jsviz-home.js?v=2"></script>
+<script type="text/javascript" src="{{STATIC_URL}}jquery-1.8.2.js"></script>
+<script type="text/javascript" src="{{STATIC_URL}}progress-view.js?v=2"></script>
+<script type="text/javascript" src="{{STATIC_URL}}progress-model.js?v=2"></script>
+<script type="text/javascript" src="{{STATIC_URL}}worker-stopgo.js?v=2"></script>
+<script type="text/javascript" src="{{STATIC_URL}}global-util.js?v=2"></script>
+<script type="text/javascript" src="{{STATIC_URL}}jsviz.js?v=2"></script>
+<script type="text/javascript" src="{{STATIC_URL}}errorsink.js?v=2"></script>
+<script type="text/javascript" src="{{STATIC_URL}}jsviz-ui.js?v=2"></script>
+<script type="text/javascript" src="{{STATIC_URL}}graph-model.js?v=2"></script>
+<script type="text/javascript" src="{{STATIC_URL}}curve-tween.js?v=2"></script>
+<script type="text/javascript" src="{{STATIC_URL}}difftype.js?v=2"></script>
+<script type="text/javascript" src="{{STATIC_URL}}jquery.form.js"></script>
+<script type="text/javascript" src="{{STATIC_URL}}jquery.dataTables.js"></script>
+{% endblock %}
+
+{% block title %}
+<title> Graphi </title>
+{% endblock %}
+
+
+{% block content %}
+<div id="titlerow" class="row-fluid">
+	<div id="titleleftspacer" class="span6 leftspacer"></div>
+	<div id="title" class="span2"><h3 id="titletext"> Graphi </h3></div>
+</div>
+<div id="info1"><p> Graphi is a web application for drawing directed graphs from the output of profilers. <br /> 
+	               </p>
+</div>
+<div id="info2"><p>A call graph and table are shown below as examples. To upload a profile's output and graph it, <br /> go to 'Graphing'. 
+                    Graphi is also on Github, if you want to run it locally. </p>
+</div>
+ <svg id="graph-svg"  preserveAspectRatio="none"><g id="mainGraphContainer" /></svg>
+			<textarea id="dot-src">	
+			</textarea>
+			<table id="profile_table" border="1">
+				<thead>
+					<tr>
+						<th id="funcname"> filename:line number:function </th>
+						<th id="totaltime"> total % of time (includes calls to other funcs) </th>
+						<th id="selftime"> self % of time </th>
+						<th id="totalcalls"> total calls </th>
+					</tr>
+				</thead>
+				<tbody id="profile_table_body">
+				</tbody>
+			</table>		
+			<span id="marker">                   
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base-nograph.html" %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}base.css"></link>
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}features.css"></link>
+{% endblock %}
+
+{% block extrascript-top %}
+<script type="text/javascript" src="{{STATIC_URL}}jquery-1.8.2.js"></script>
+{% endblock %}
+
+{% block title %}
+<title> Graphi </title>
+{% endblock %}
+
+{% block content %}
+<div id="featurestitle"><h3 id="titletext"> Features </h3></div>
+<div id="graphtitlediv"><h4 id="graphtitle"> Directed Graph </h4></div>
+<div id="info1"><p> Graphi uses Javascript to draw a directed graph of function calls. Each node represents a function, <br /> and an edge  
+					represents a call from a function to another function. <br /> <br /> A node's label in the graph has the layout: function-name total-time-% (self-time-%) total-calls. <br />
+					<br />
+					Function name has the format: file:line-number:function-name. <br />
+					Total time % is the % of running time spent in the function and its children. <br />
+					Self time % is the % of running time spent in the function itself. <br />
+					Total calls is the total number of times the function was called. <br />
+	               </p>
+</div>
+<div id="tabletitlediv"><h4 id="tabletitle"> Sortable Table </h4></div>
+<div id="info2"><p> Graphi also creates a sortable table of function calls. The table's labels have the same meaning as <br /> the labels in the graph. 
+					<br /> <br /> Click on a table header to sort the table by that header. The table can also <br /> be adjusted to display more rows or searched.
+	               </p>
+</div>
+{% endblock %}

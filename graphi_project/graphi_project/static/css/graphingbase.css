@@ -1,0 +1,81 @@
+#container-body-content {
+	font-family: 'Times', 'Times New Roman', 'Georgia';
+	}
+
+#navbardiv {
+	min-width: 1040px;
+	}
+	
+#navbardivinner {
+	min-width: 1040px;
+	}
+	
+#navbarcontainer {
+	min-width: 1040px;
+	}
+
+.container {
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+	min-width: 980px;
+	}
+	
+#homelink {
+	position: relative;
+	}
+	
+
+	
+.container-body {
+	position: relative;
+	height: 100%;
+	}
+		
+#footer {
+	border-top: 1px solid #CEDCDC;
+	position: relative;
+	top: 480px;
+	font-size: 12px;
+	padding-bottom: 15px;
+	background-color: white;
+	min-width: 1040px;
+}
+
+
+		
+#footerhome {
+	padding-right: 4%;
+	}
+
+#footerfaq {
+	padding-right: 4%;
+	}
+	
+#footercopyright {
+	position: relative;
+	bottom: 1.5px;
+	right: 14px;
+	}
+
+#footername {
+	position: relative;
+	right: 15px;
+	}
+
+@media (max-width: 1450px) {
+	   #navleft.nav {
+	   		}
+	   #footerwrapper {
+	   		} 
+	}
+    	
+@media (max-width: 1450px) {
+	.leftspacer {
+		min-height: 0px !important;
+		height: 0px !important;
+		min-width: 0px !important;
+		width: 0px !important;
+	}
+}
+
+

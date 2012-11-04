@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset='UTF-8'/>
+		<title> Graphing </title>
+		<link href="{{STATIC_URL}}bootstrap.css" rel="stylesheet">
+        {% block extrastyle %}
+        {% endblock %}
+        {% block extrascript-top %}
+        {% endblock %}
+        {% block title %}
+        {% endblock %}	
+	</head>
+	<body onload="void w_launch()">
+		<div id="navbardiv" class="navbar navbar-inverse navbar-static-top">
+			<div id="navbardivinner" class="navbar-inner">
+				<div id="navbarcontainer" class="container-fluid">	
+						<ul class="nav" id="navleft">
+						<li><a href="{% url graphi_main.views.home %}" id="homelink" class="navbar-link navbar-text"> Home </a></li>
+						<li><a href="{% url graphi_main.views.graphing %}" id="graphinglink" class="navbar-link navbar-text"> Graphing </a></li>
+                        <li><a href="{% url graphi_main.views.features %}" id="featureslink" class="navbar-link navbar-text sep"> Features </a>
+						<li><a href="{% url graphi_main.views.faq %}" id="faqlink" class="navbar-link navbar-text"> FAQ </a></li>
+						<li><a href="{% url graphi_main.views.about %}" id="aboutlink" class="navbar-link navbar-text"> About </a></li>
+						<li><a href="{% url graphi_main.views.contact %}" id="contactlink" class="navbar-link navbar-text"> Contact </a></li>
+						</ul>
+				</div>
+			</div>
+		  </div>
+		  <div class="container-fluid container-body">
+		    <div id="container-body-content">
+		    	{% block content %}
+                {% endblock content %}	
+			 </div>
+			<div id="footer" class="row-fluid">
+				<div id="footerwrapper">
+				<div id="footerleftdiv" class="span2 offset3">
+					<a href="{% url graphi_main.views.home %}" id="footerhome"> Home </a>
+					<a href="{% url graphi_main.views.features %}" id="footerfeatures"> Features </a>
+				</div>
+				<div id="footermiddlediv" class="span2">
+					<img id="footercopyright" src="{{STATIC_URL}}copyright2.gif" />
+					<a href="#" id="footername"> David Wong </a></br>
+					<a href="mailto:davidwong.xc@gmail.com" id="footeremail"> davidwong.xc@gmail.com </a></br>
+					<a href="{% url graphi_main.views.hire_me %}" id="footerhireme"> Hire Me </a>
+				</div>
+				<div id="footerrightdiv" class="span2">
+				    <a href="{% url graphi_main.views.faq %}" id="footerfaq"> FAQ </a>
+					<a href="{% url graphi_main.views.contact %}" id="footercontact"> Contact </a> <br />
+                    <a href="{% url graphi_main.views.terms %}" id="footerterms"> Terms of Service </a>
+                </div>
+				</div>
+			</div>		
+		  </div>
+		<script language="javascript" type="text/javascript" src="{{STATIC_URL}}jquery-1.8.1.js"></script>	
+		<script language="javascript" type="text/javascript" src="{{STATIC_URL}}bootstrap.min.js"></script>
+        {% block extrascript %}
+        {% endblock %}
+     </body>
+</html>

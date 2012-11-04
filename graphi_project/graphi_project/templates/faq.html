@@ -1,0 +1,36 @@
+{% extends "base-nograph.html" %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}base.css"></link>
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}faq.css"></link>
+{% endblock %}
+
+{% block extrascript-top %}
+<script type="text/javascript" src="{{STATIC_URL}}jquery-1.8.2.js"></script>
+{% endblock %}
+
+{% block title %}
+<title> Graphi </title>
+{% endblock %}
+
+{% block content %}
+<div id="faqtitle"><h3 id="titletext"> FAQ </h3></div>
+<div id="ques1"><h4 id="ques1text"> Is Graphi free to use? </h4></div>
+<div id="info1"><p> Yes, Graphi is free to use. Please see the <a href="{% url graphi_main.views.terms %}"> Terms of Service </a> for the license and liability disclaimer. <br />
+	               </p>
+</div>
+<div id="ques2"><h4 id="ques2text"> What profilers does Graphi support? </h4></div>
+<div id="info2"><p> Graphi currently only supports output from Python's cProfile. Support will be extended <br />
+					to other profilers in the future, probably starting with profilers for Ruby and C. <br />
+	               </p>
+</div>
+<div id="ques3"><h4 id="ques3text"> What do you do with uploaded profiler output? </h4></div>
+<div id="info3"><p> It's saved to disk so the application can generate the directed graph. Beyond that, I don't do <br />
+					anything with the profiler output. I periodically delete uploaded files. 
+	               </p>
+</div>
+<div id="ques4"><h4 id="ques4text"> My question isn't here, what should I do? </h4></div>
+<div id="info4"><p> Email me at <a href="mailto:davidwong.xc@gmail.com"> davidwong.xc@gmail.com </a>, or use the contact form on this site. 
+	               </p>
+</div>
+{% endblock %}

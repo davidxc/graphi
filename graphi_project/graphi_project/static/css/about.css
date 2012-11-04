@@ -1,0 +1,64 @@
+html {
+	width: 100%;
+	min-width: 1300px;
+	}
+	
+body {
+	min-width: 1300px;
+	}
+
+#titlerow {
+	position: relative;
+	color: black;
+	right: 3%;
+	}
+		
+#info1 {
+	position: relative;
+	font-size: 16px;
+	left: 35%;
+	top: 70px;
+	width: 63%;
+	}
+	
+#info2 {
+	position: relative;
+	font-size: 16px;
+	left: 35%;
+	top: 90px;
+	width: 63%;
+	}
+	
+#info3 {
+	position: relative;
+	font-size: 16px;
+	left: 35%;
+	top: 110px;
+	width: 63%;
+	}
+
+
+ @media (max-width: 1740px) {
+	#titlerow {
+		left: 2.5% !important;
+		width: 95%;
+		}	
+	}
+
+	
+@media (max-width: 1450px) {
+	#title {
+		left: 560px;
+		}
+			
+	#info1 {
+		left: 32% !important;
+		}
+		
+	#info2 {
+		left: 32% !important;
+		}
+	#info3 {
+		left: 32% !important;
+	}
+}

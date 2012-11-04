@@ -1,0 +1,32 @@
+{% extends "base-nograph.html" %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}base.css"></link>
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}about.css"></link>
+{% endblock %}
+
+{% block extrascript-top %}
+<script type="text/javascript" src="{{STATIC_URL}}jquery-1.8.2.js"></script>
+{% endblock %}
+
+{% block title %}
+<title> Graphi </title>
+{% endblock %}
+
+{% block content %}
+<div id="titlerow" class="row-fluid">
+	<div id="titleleftspacer" class="span6 leftspacer"></div>
+	<div id="title" class="span2"><h3 id="titletext"> About </h3></div>
+</div>
+<div id="info1"><p> Graphi is a web application for drawing directed graphs from the output of profilers. <br />
+					Graphi also creates a sortable table of function calls and running times.
+	               </p>
+</div>
+<div id="info2"><p> Graphi currently only supports output from Python's cProfile. 
+					Support will be extended <br /> to other profilers in the future, probably starting with profilers for Ruby and C. </p>
+					
+</div>
+<div id="info3"><p> The code for Graphi is also on Github if you want to run it locally. To report bugs <br /> or request features, please email the developer 
+				    at <a href="mailto:davidwong.xc@gmail.com"> davidwong.xc@gmail.com </a>. </p>
+</div>
+{% endblock %}

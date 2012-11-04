@@ -1,0 +1,166 @@
+html {
+	height: 100%;	
+	}
+	
+body {
+	height: 2000px;
+	width: 4000px;
+	}
+	
+#navleft.nav {
+	left: 550px; 
+	}
+		
+#graph-svg {
+	position: relative;
+	right: 10%;
+	top: 120px;
+	}
+
+#info1 {
+	position: relative;
+	left: 600px;
+	top: 50px;
+	}
+
+#info2 {
+	position: relative;
+	left: 600px;
+	top: 70px;
+	}
+
+#info3 {
+	position: relative;
+	left: 600px;
+	top: 150px;
+	visibility: hidden;
+	}
+
+#profile_table {
+	font-family: verdana, arial, sans-serif;
+	font-size: 12.5px;
+	border-width: 1px;
+	border-color: black;
+	border-collapse: collapse;
+	position: relative;
+	top: 25px;
+	left: 350px;
+	}
+	
+#profilefilesubmit {
+	height: 27.5px;
+	line-height: 27.5px;
+	}
+	
+#profileform {
+	position: relative;
+	left: 420px;
+	top: 120px;
+	}
+
+#termsacceptbox {
+	position: relative;
+	bottom: 1.75px;
+	}
+	
+#errors {
+	position: relative;
+	left: 400px;
+	top: 110px;
+	width: 725px;
+	color: #E60000;
+	text-align: center;
+	}
+	
+#profiletypeselect {
+	position: relative;
+	top: 5px;
+	height: 27.5px;
+	line-height: 27.5px;
+	}
+	
+#footer {
+	position: relative;
+	right: 950px;
+	}
+	
+#profile_table th {
+	padding: 6px;
+	background-color: #F5F5F5;
+	}
+
+#profile_table_wrapper {
+	position: relative;
+	top: 300px;
+	left: 325px;
+	width: 25%;
+	}
+		
+#profile_table td {
+	padding: 6px;
+	}
+
+#funcname {
+	min-width: 300px;
+	}
+	
+#totaltime {
+	min-width: 400px;
+	}
+	
+#selftime {
+	min-width: 150px !important;
+	}
+	
+#totalcalls {
+	min-width: 100px !important;
+	}
+
+#dot-src {
+	display: none;
+	height: 5px;
+	width: 5px;
+	overflow: hidden;
+	}
+
+#termsofservicewarning {
+	position: relative;
+	left: 135px;
+	}
+	
+@media (max-width: 1450px) {
+	#navleft.nav {
+		left: 375px !important;
+		}
+		
+	#info1 {
+		left: 425px !important;
+		}
+		
+	#info2 {
+		left: 425px !important;
+		}
+		
+	#info3 {
+		left: 425px !important;
+		}
+		
+	#profile_table {
+		left: 175px;
+		}
+		
+	#profileform {
+		left: 245px !important;
+		}
+	
+	#profile_table_wrapper {
+		left: 150px !important;
+		}
+		
+	#errors {
+		left: 525px !important;
+		}
+	}
+	
+	
+		

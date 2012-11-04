@@ -1,0 +1,58 @@
+	
+html {
+	height: 100%;	
+	}
+	
+body {
+	height: 2000px;
+	width: 4000px;
+	}
+	
+	
+#graph-svg {
+	position: relative;
+	right: 10%;
+	}
+
+#profile_table {
+	font-family: verdana, arial, sans-serif;
+	font-size: 12.5px;
+	border-width: 1px;
+	border-color: black;
+	border-collapse: collapse;
+	position: relative;
+	top: 100px;
+	left: 460px;
+	}
+	
+#profile_table th {
+	padding: 6px;
+	background-color: #F5F5F5;
+	}
+
+#profile_table_wrapper {
+	position: relative;
+	top: 100px;
+	left: 460px;
+	width: 25%;
+	}
+		
+#profile_table td {
+	padding: 6px;
+	}
+
+#funcname {
+	min-width: 300px;
+	}
+	
+#totaltime {
+	min-width: 400px;
+	}
+	
+#selftime {
+	min-width: 150px !important;
+	}
+	
+#totalcalls {
+	min-width: 100px !important;
+	}

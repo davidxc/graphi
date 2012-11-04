@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}graphingbase.css"></link>
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}jquery.dataTables.css"></link>
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}jquery.dataTables_themeroller.css"></link>
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}jquery-ui-1.9.0.custom.css"></link>
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}graphing.css"></link>
+{% endblock %}
+
+{% block extrascript-top %}
+<script type="text/javascript" src="{{STATIC_URL}}workered-jsviz.js?v=2"></script>
+<script type="text/javascript" src="{{STATIC_URL}}jquery-1.8.2.js"></script>
+<script type="text/javascript" src="{{STATIC_URL}}progress-view.js?v=2"></script>
+<script type="text/javascript" src="{{STATIC_URL}}progress-model.js?v=2"></script>
+<script type="text/javascript" src="{{STATIC_URL}}worker-stopgo.js?v=2"></script>
+<script type="text/javascript" src="{{STATIC_URL}}global-util.js?v=2"></script>
+<script type="text/javascript" src="{{STATIC_URL}}jsviz.js?v=2"></script>
+<script type="text/javascript" src="{{STATIC_URL}}errorsink.js?v=2"></script>
+<script type="text/javascript" src="{{STATIC_URL}}jsviz-ui.js?v=2"></script>
+<script type="text/javascript" src="{{STATIC_URL}}graph-model.js?v=2"></script>
+<script type="text/javascript" src="{{STATIC_URL}}curve-tween.js?v=2"></script>
+<script type="text/javascript" src="{{STATIC_URL}}difftype.js?v=2"></script>
+<script type="text/javascript" src="{{STATIC_URL}}jquery.form.js"></script>
+<script type="text/javascript" src="{{STATIC_URL}}jquery.dataTables.js"></script>
+{% endblock %}
+
+{% block title %}
+<title> Graphing </title>
+{% endblock %}
+
+{% block content %}
+<div id="info1"><p> Graphi only supports output from Python's cProfile right now. <br />
+					Support will be extended to other profilers in the future. 
+	               </p>
+</div>
+<div id="info2"><p> To save the output of Python's cProfile, run 'python -m cProfile -o output_file path/to/script'. <br />
+					Then select the output file in the form below and click Graph. </p>
+</div>
+<form id="profileform" enctype="multipart/form-data" method="POST" action="/parsepython/">
+    {% csrf_token %}
+    <p id="termsofservicewarning">
+    Please check the following checkbox to indicate that you accept Graphi's <a href="{% url graphi_main.views.terms %}"> terms of service </a>.
+    <input id="termsacceptbox" type="checkbox" name="termsacceptance" value="termsacceptance">
+    </p>
+    
+    <select id="profiletypeselect">
+    	<option value="python-cprofile"> Python cProfile </option>
+    </select>
+    <input id="profilefileinput" type="file" name="profile" size="40">
+    <input id="profilefilesubmit" type="submit" value="Graph">
+</form>
+<p id="errors"> </p>
+<div id="info3"><p> A node's label in the graph has the layout: function-name total-time-% (self-time-%) total-calls. <br />
+					Total time % is the % of running time spent in the function and its children. <br />
+					Self time % is the % of running time spent in the function itself. <br />
+					<br />
+					An edge's label in the graph has the layout: total-time-% calls. <br />
+					Total time % is the % of running time spent in the child function. <br />
+					Calls is the number of times the parent function called the child function. <br />
+				</p>
+</div>
+ <svg id="graph-svg"  preserveAspectRatio="none"><g id="mainGraphContainer" /></svg>
+			<textarea id="dot-src">	
+			</textarea>
+			<table id="profile_table" border="1">
+				<thead>
+					<tr>
+						<th id="funcname"> filename:line number:function </th>
+						<th id="totaltime"> total % of time (includes calls to other funcs) </th>
+						<th id="selftime"> self % of time </th>
+						<th id="totalcalls"> total calls </th>
+					</tr>
+				</thead>
+				<tbody id="profile_table_body">
+				</tbody>
+			</table>		
+			<span id="marker">                   
+{% endblock %}

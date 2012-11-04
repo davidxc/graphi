@@ -1,0 +1,27 @@
+html {
+	width: 100%;
+	min-width: 1300px;
+	}
+	
+body {
+	min-width: 1300px;
+	}
+		
+#info1 {
+	position: relative;
+	font-size: 14.5px;
+	left: 33%;
+	top: 70px;
+	width: 500px;
+	height: 20px;
+	text-align: center;
+	}
+	
+	
+@media (max-width: 1450px) {
+			
+	#info1 {
+		left: 30% !important;
+		}
+	
+}
