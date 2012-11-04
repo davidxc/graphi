@@ -20,6 +20,7 @@
 
 	- Is there a help page?
 
-	  Please see the FAQ template in the /graphi/graphi_project/graphi_project/templates folder. You can also       		  email me at davidwong.xc@gmail.com.
+	  Please see the FAQ template in the /graphi/graphi_project/graphi_project/templates folder. You can also
+          email me at davidwong.xc@gmail.com.
 
        
