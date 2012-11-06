@@ -1,4 +1,4 @@
-                               Graphi
+                Graphi - startgraphi.com
 
 
 	- What is Graphi?
