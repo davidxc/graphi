@@ -1,4 +1,4 @@
-Unit tests will be added in the future. If you find an error, email me 
+I will add unit tests in the future. If you find an error, email me 
 at davidwong.xc@gmail.com. 
 
 I've included a couple of Python's cProfile's output files here. 
